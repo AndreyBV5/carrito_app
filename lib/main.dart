@@ -33,8 +33,9 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Card(child: _SampleCard(cardName: 'Elevated Card')),
-              Card.filled(child: _SampleCard(cardName: 'Filled Card')),
-              Card.outlined(child: _SampleCard(cardName: 'Outlined Card')),
+              Card(child: _SampleCard(cardName: 'Elevated Card')),
+              Card(child: _SampleCard(cardName: 'Elevated Card')),
+              Card(child: _SampleCard(cardName: 'Elevated Card')),
             ],
           ),
         ),
