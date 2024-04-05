@@ -19,33 +19,40 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'App Carrito',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Contador con GetX'),
+          title: Text('Carrito de Compras'),
         ),
-        body: Center(
+        body: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Obx(() => Text(
-                'Contador: ${_controller.count}',
-                style: TextStyle(fontSize: 24),
-              )),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  _controller.increment(); // Incrementa el contador
-                },
-                child: Text('Incrementar'),
-              ),
+            children: <Widget>[
+              Card(child: _SampleCard(cardName: 'Elevated Card')),
+              Card.filled(child: _SampleCard(cardName: 'Filled Card')),
+              Card.outlined(child: _SampleCard(cardName: 'Outlined Card')),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class _SampleCard extends StatelessWidget {
+  const _SampleCard({required this.cardName});
+  final String cardName;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 300,
+      height: 100,
+      child: Center(child: Text(cardName)),
     );
   }
 }
