@@ -169,5 +169,5 @@ final List<Product> _products = [
   Product('Spaghetti Bolognese', 5000, Icons.restaurant_menu),
   Product('Hamburguesa con Papas', 2500, Icons.restaurant_menu),
   Product('Chifrijo', 3000, Icons.restaurant_menu),
-  Product('Carne en Salsa', 4000, Icons.restaurant_menu),
+  Product('Carne en Salsa', 5000, Icons.restaurant_menu),
 ];
